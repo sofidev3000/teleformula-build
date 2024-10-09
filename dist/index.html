@@ -20,14 +20,208 @@
       <meta property="twitter:title" content="Tele Formula">
       <meta property="twitter:description" content="Nuestros servicios">
       <meta property="twitter:image" content="https://teleformula.com.mx/public/img/thumbnail_mockup.png">
-      <!-- css librerias/ cdn --><!-- Iconify CDN -->
-      <link rel="stylesheet" href="./_astro/index.wl4T5HSr.css">
+
+      <style>
+            @font-face {
+                  font-family: Open Sans Condensed;
+                  src: url(../fonts/OpenSans_Condensed-Regular.ttf) format("truetype");
+                  font-weight: 400;
+                  font-style: normal
+            }
+
+            @font-face {
+                  font-family: Open Sans Condensed;
+                  src: url(../fonts/OpenSans_Condensed-Bold.ttf) format("truetype");
+                  font-weight: 700;
+                  font-style: normal
+            }
+
+            @font-face {
+                  font-family: Open Sans Condensed;
+                  src: url(../fonts/OpenSans_Condensed-ExtraBold.ttf) format("truetype");
+                  font-weight: 800;
+                  font-style: normal
+            }
+
+            @font-face {
+                  font-family: Open Sans Condensed;
+                  src: url(../fonts/OpenSans_Condensed-Light.ttf) format("truetype");
+                  font-weight: 300;
+                  font-style: normal
+            }
+
+            @font-face {
+                  font-family: Open Sans Condensed;
+                  src: url(../fonts/OpenSans_Condensed-Medium.ttf) format("truetype");
+                  font-weight: 500;
+                  font-style: normal
+            }
+
+            @font-face {
+                  font-family: Open Sans SemiCondensed;
+                  src: url(../fonts/OpenSans_SemiCondensed-ExtraBold.ttf) format("truetype");
+                  font-weight: 800;
+                  font-style: normal
+            }
+
+            .hero {
+                  display: flex;
+                  justify-content: center;
+                  padding: 2rem 8rem;
+                  max-width: 1300px;
+                  writing-mode: horizontal-tb;
+                  gap: 15rem;
+                  height: 90dvh;
+                  flex-wrap: wrap;
+            }
+
+            .hero__logo {
+                  width: 100%;
+                  height: 100%;
+                  max-width: 300px
+            }
+
+            .hero__content {
+                  flex-basis: 40%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: start;
+                  flex-direction: column;
+                  gap: 1rem;
+                  font-size: 2.5rem;
+                  width: 100%;
+
+            }
+
+            .hero__aside {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  min-height: 100%;
+                  max-width: 49rem;
+                  min-width: 39rem;
+            }
+
+            .hero__background {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: url(./img/sitios-web.png) center/contain no-repeat;
+                  width: 100%;
+                  min-height: 100%;
+                  z-index: -1
+            }
+
+            @media screen and (max-width: 984px) {
+                  .hero {
+                        justify-content: center;
+                        align-self: center;
+                        align-items: center;
+                        gap: 0;
+                        padding: 1rem;
+
+                  }
+                  .hero__title-image{
+                        width:30rem;
+                  }
+                  .hero__description{
+                        font-size: 1.6rem;
+                  }
+                  .hero__logo {
+                        height: 100%;
+                        width: 20rem
+                  }
+
+                  .hero__background {
+                        width: 100%;
+                        min-height: 50dvh
+                  }
+            }
+
+            .header {
+                  margin: 0 auto;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  width: 100%;
+                  flex-wrap: wrap;
+                  min-width: 20rem;
+                  max-width: 1300px;
+                  padding: 2rem;
+                  gap: 1rem
+            }
+            .header__logo{
+                  width: 19rem;
+            }
+            .header__info {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 2rem;
+                  font-size: 2rem
+            }
+
+            .header__title:hover {
+                  color: #0063af
+            }
+
+            .header__date {
+                  font-weight: 700;
+                  color: #0063af
+            }
+
+            @media screen and (max-width: 768px) {
+                  .header__info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        font-size: 1.6rem;
+                        text-align: center
+                  }
+                  .header__title{
+                        font-size: 1.8rem;
+                  }
+            }
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box
+            }
+
+            html {
+                  scroll-behavior: smooth;
+                  font-size: 62.5%
+            }
+
+            body {
+                  font-family: Open Sans Condensed, sans-serif;
+                  font-weight: 400;
+                  font-size: 1.6rem;
+                  line-height: 1.5;
+                  background-color: #070707;
+                  color: #e4e4e4
+            }
+
+            main {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center
+            }
+
+            img {
+                  object-fit: contain;
+                  width: 100%;
+            }
+      </style>
       <script type="module" src="./_astro/hoisted.CFzS1bex.js"></script>
 </head>
 
 <body>
-      <header class="header"> <img src="./img/teleformula-color.png" alt="Teleformula logo" aria-label="Teleformula logo"
-                  width="250" height="250">
+      <header class="header"> <img class="header__logo" src="./img/teleformula-color.png" alt="Teleformula logo"
+                  aria-label="Teleformula logo" width="250">
             <div class="header__info">
                   <h2 class="header__title">Sobre Nosotros</h2>
                   <p class="header__date"></p>
@@ -36,7 +230,7 @@
       <main>
             <section class="hero">
                   <article class="hero__content"> <img class="hero__title-image" src="./img/teleformula-titulo.png"
-                              alt="Titulo teleformula" aria-label="Titulo de  teleformula " width="500" height="500">
+                              alt="Titulo teleformula" aria-label="Titulo de  teleformula " width="500">
                         <p class="hero__description">
                               Con 90 años de experiencia, nos posicionamos como la marca líder en la
                               industria de la comunicación gracias a nuestra amplia oferta en medios,
@@ -46,7 +240,7 @@
                   </article>
                   <aside class="hero__aside">
                         <div class="hero__background"> <img class="hero__logo" src="./img/teleformula-blanco.png"
-                                    alt="Teleformula logo" aria-label="Teleformula logo" width="300" height="300">
+                                    alt="Teleformula logo" aria-label="Teleformula logo" width="300">
                         </div>
                   </aside>
             </section>
